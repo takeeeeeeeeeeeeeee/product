@@ -49,6 +49,6 @@ src/
 ```bash
 npm install
 npm run dev
-
+```
 
 ![メイン画面](image.png)
