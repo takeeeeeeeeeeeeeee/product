@@ -1,0 +1,65 @@
+
+hr {
+    border-width:5px 0 0 0; 
+    border-color:#fdba3d; 
+    margin: 0px;
+}
+
+
+.kazou p1 {
+    position: absolute;
+    color: white;
+    top: 90px;
+    left: 20px;
+    font-size: 30px;
+    font-size: 300%;
+}
+
+.btn--orange,
+a.btn--orange {
+    color: rgb(0, 0, 0);
+    background-color: #fdba3d;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: #000;
+    background: #fdba3d;
+}
+.aaa {
+    display: flex;
+}
+    
+.kazou2 {
+    width: 50%;
+    color: rgb(255, 255, 255);
+}
+.kazou2 p2 {
+    position: absolute;
+    top: 60pc;
+    left: 10px;
+    font-size: 200%;
+}
+    
+.kazou3 {
+    color: #fff;
+    margin-left: 2px;
+    width: 50%;
+
+    
+}
+
+.kazou3 p3 {
+    position: absolute;
+    top: 60pc;
+    right: 40px;
+    font-size: 200%;
+}
+.kazou4 {
+    color: #fff;
+}
+.kazou4 p4{
+    position: absolute;
+    top: 100pc;
+    left: 20px;
+    font-size: 300%;
+}

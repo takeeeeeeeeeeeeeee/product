@@ -1,0 +1,100 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>タスク管理</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--タスク入力-->
+      <div>
+        <label for="task">タスク名:</label>
+        <input type="text" id="task" v-model="taskName">
+      </div>
+      <div>
+        <label for="date">日付:</label>
+        <input type="date" id="date" v-model="taskDate">
+      </div>
+      <button class="taskbutton" @click="addTask">タスク追加</button>
+      <!--ソート-->
+      <div>
+        <button class="sortbutton" @click="sortTasks('asc')">日付昇順</button>
+        <button class="sortbutton" @click="sortTasks('desc')">日付降順</button>
+      </div>
+      <!--タスク入力を返す-->
+      <ul>
+        <li v-for="task in sortedTasks" :key="task.id">
+          <h3>タスク名:</h3><p>{{ task.name }}</p>
+          <h3>日付:</h3><p>{{ formatDate(task.date) }}</p>
+          <button class="taskbutton" @click="deleteTask(task.id)">削除</button>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          tasks: [],
+          taskName: '',
+          taskDate: '',
+          sortDirection: ''
+        },
+        methods: {
+          addTask() {
+            if (this.taskName && this.taskDate) {
+              const task = {
+                id: Date.now(),
+                name: this.taskName,
+                date: this.taskDate
+              };
+              this.tasks.push(task);
+              this.taskName = '';
+              this.taskDate = '';
+            }
+          },
+          deleteTask(id) {
+            this.tasks = this.tasks.filter(task => task.id !== id);
+          },
+          formatDate(dateString) {
+            const date = new Date(dateString);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            return `${month}/${day}/${year}`;
+          },
+          sortTasks(direction) {
+            this.sortDirection = direction;
+            this.tasks.sort((a, b) => {
+              const dateA = new Date(a.date);
+              const dateB = new Date(b.date);
+              if (direction === 'asc') {
+                return dateA - dateB;
+              } else if (direction === 'desc') {
+                return dateB - dateA;
+              }
+              return 0;
+            });
+          }
+        },
+        computed: {
+          sortedTasks() {
+            return this.tasks.slice().sort((a, b) => {
+              const dateA = new Date(a.date);
+              const dateB = new Date(b.date);
+              if (this.sortDirection === 'asc') {
+                return dateA - dateB;
+              } else if (this.sortDirection === 'desc') {
+                return dateB - dateA;
+              }
+              return 0;
+            });
+          }
+        }
+      })
+    </script>
+
+
+  </body>
+</html>

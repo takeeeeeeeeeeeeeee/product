@@ -1,0 +1,30 @@
+Date : 2024-04-19 00:58:21
+Directory : c:\Users\take\Desktop\product-main\product-main\python_bot
+Total : 6 files,  129 codes, 10 comments, 37 blanks, all 176 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |          6 |        129 |         10 |         37 |        176 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                  | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                     |          6 |        129 |         10 |         37 |        176 |
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                              | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\take\Desktop\product-main\product-main\python_bot\Aisatu.py  | Python   |          9 |          2 |          2 |         13 |
+| c:\Users\take\Desktop\product-main\product-main\python_bot\Enzan.py   | Python   |         20 |          2 |          3 |         25 |
+| c:\Users\take\Desktop\product-main\product-main\python_bot\Janken.py  | Python   |         33 |          3 |         12 |         48 |
+| c:\Users\take\Desktop\product-main\product-main\python_bot\Kazuate.py | Python   |         23 |          1 |          8 |         32 |
+| c:\Users\take\Desktop\product-main\product-main\python_bot\Tenki.py   | Python   |         13 |          2 |          2 |         17 |
+| c:\Users\take\Desktop\product-main\product-main\python_bot\bot.py     | Python   |         31 |          0 |         10 |         41 |
+| Total                                                                 |          |        129 |         10 |         37 |        176 |
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
