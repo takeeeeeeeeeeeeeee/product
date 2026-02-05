@@ -1,0 +1,121 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.filters {
+  margin: 16px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-item.today {
+  background: #fff3cd;
+}
+
+.todo-item.done {
+  background: #fff3cd;
+}
+
+.todo-item.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.filters button {
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+}
+
+.filters button.active {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-item.overdue {
+  background: #fff3cd;
+}
+
+.todo-item.overdue span {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.overdue-alert {
+  color: #e53935;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.sort-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.sort-toggle span {
+  color: #666;
+}
+
+.toggle {
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.toggle button {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.toggle button.active {
+  background: #333;
+  color: #fff;
+}
