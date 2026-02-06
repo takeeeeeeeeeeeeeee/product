@@ -32,7 +32,7 @@ React + Vite で作成した天気ダッシュボードアプリです。
 
 ## スクリーンショット
 
-![スクリーンショット](src\assets\image.png)
+![スクリーンショット](image.png)
 
 ---
 
@@ -40,7 +40,6 @@ React + Vite で作成した天気ダッシュボードアプリです。
 
 src/  
 ├── assets/  
-│ ├── image.png  
 │ └── react.svg  
 ├── components/  
 │ ├── WeatherCard.jsx  
