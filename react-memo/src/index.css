@@ -1,0 +1,247 @@
+/* src/index.css */
+
+/* ===== 基本レイアウト ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.app.dark {
+  background: #1e1e1e;
+  color: #f4f4f4;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 280px;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.app.dark .sidebar {
+  background: #2c2c2c;
+  border-color: #444;
+}
+
+.sidebar button {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.sidebar button:hover {
+  background: #0056b3;
+}
+
+.sidebar .search {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.app.dark .search {
+  background: #444;
+  color: #f4f4f4;
+  border-color: #666;
+}
+
+/* タグフィルタ */
+.tag-filter, .sort-filter {
+  margin-bottom: 1rem;
+}
+
+.tag-filter button, .sort-filter button {
+  margin: 2px;
+  padding: 0.3rem 0.5rem;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 3px;
+  border: none;
+}
+
+.tag-filter button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.app.dark .tag-filter button,
+.app.dark .sort-filter button {
+  background: #555;
+  color: #f4f4f4;
+}
+
+.app.dark .tag-filter button.active {
+  background: #1e90ff;
+}
+
+/* メモリスト */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.app.dark .sidebar li {
+  border-color: #444;
+}
+
+.sidebar li.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.memo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memo-header .title {
+  font-weight: bold;
+}
+
+.memo-header .delete {
+  background: #dc3545;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.memo-header .delete:hover {
+  background: #a71d2a;
+}
+
+/* 更新日 */
+.date {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.app.dark .date {
+  color: #aaa;
+}
+
+/* ===== Editor ===== */
+.editor {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.editor textarea {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+.app.dark .editor input,
+.app.dark .editor textarea {
+  background: #333;
+  color: #f4f4f4;
+  border-color: #555;
+}
+
+/* Markdownプレビュー */
+.markdown-preview {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  overflow-y: auto;
+}
+
+.app.dark .markdown-preview {
+  background: #2b2b2b;
+  border-color: #555;
+  color: #f4f4f4;
+}
+
+/* コードブロック */
+.markdown-preview pre {
+  background: #333;
+  color: #f4f4f4;
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* 空状態 */
+.empty {
+  color: #888;
+  font-style: italic;
+}
+
+/* タグ */
+.tag-list {
+  margin-top: 0.3rem;
+}
+.tag {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  margin: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.tag:hover {
+  opacity: 0.8;
+}
+
+/* タグ追加入力 */
+.tag-editor input {
+  width: 100%;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Markdownチェックリスト */
+.markdown-preview input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
