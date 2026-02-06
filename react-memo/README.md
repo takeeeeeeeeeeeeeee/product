@@ -5,7 +5,7 @@ React + Vite を使用して作成した **ポートフォリオ向けメモア�
 
 ---
 
-## 🛠 使用技術
+## 使用技術
 - React
 - Vite
 - JavaScript (ES6+)
